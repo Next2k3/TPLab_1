@@ -20,11 +20,11 @@ public class Owner {
         }
     }
     public String getItems(){
-        String items="Owned items by "+name+" : ";
+        StringBuilder items= new StringBuilder("Owned items by " + name + " : ");
         for(Item item: ownedItems) {
-            items+=item.getName() + " - "+ item.getDescription();
+            items.append(item.getName()).append(" - ").append(item.getDescription());
         }
-        return items;
+        return items.toString();
     }
     public String getName(){
         return name;

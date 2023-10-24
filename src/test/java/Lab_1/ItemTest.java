@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 public class ItemTest {
     @Test
-    public void ItemTest() {
+    public void ItemMethodesTest() {
         Item item = new Item("Rzecz", "Opis");
         assertEquals("Rzecz", item.getName());
         assertEquals("Opis", item.getDescription());
