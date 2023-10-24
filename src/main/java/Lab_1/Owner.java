@@ -14,7 +14,7 @@ public class Owner {
         ownedItems.add(item);
     }
     public void printItems(){
-        System.out.println("Owned items by "+name+":"); //NOPMD - suppressed SystemPrintln - TODO explain reason for suppression
+        System.out.println("Owned items by "+name+":");
         for(Item item: ownedItems) {
             System.out.println(item.getName() + " - "+ item.getDescription());
         }
