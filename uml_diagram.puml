@@ -1,0 +1,30 @@
+@startuml
+package Lab_1 {
+    class Item {
+        - name: String
+        - description: String
+        + Item(name: String, description: String)
+        + getName(): String
+        + getDescription(): String
+    }
+
+    class Owner {
+        - name: String
+        - ownedItems: List<Item>
+        + Owner(name: String)
+        + addOwnedItem(item: Item): void
+        + printItems(): void
+        + getItems(): String
+        + getName(): String
+    }
+
+    class ItemOwnershipApp {
+        + main(args: String[]): void
+    }
+
+    Item --* Owner : owns
+    Owner --* Item : has
+    Owner -- ItemOwnershipApp : uses
+}
+
+@enduml
